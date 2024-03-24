@@ -9,11 +9,11 @@ import SideBar from "./home/general/SideBar";
 
 function Home() {
   
-  const [ burgerState, setBurgerState ] = useState(true);
+  const [ burgerState, setBurgerState ] = useState(false);
 
   return (
     <>
-      <div className="flex-1 bg-light-mode-A text-light-mode-B h-screen w-screen overflow-scroll">
+      <div className="flex-1 bg-light-mode-A text-light-mode-B">
         <Navigation burgerState={burgerState} setBurgerState={setBurgerState}/>
         <Hero />
         <About />
@@ -21,7 +21,7 @@ function Home() {
         <Resume />
         <Footer />
 
-        <SideBar burgerState={burgerState} setBurgerState={setBurgerState}/>
+        {burgerState && <SideBar burgerState={burgerState} setBurgerState={setBurgerState}/>}
       </div>
     </>
   )

@@ -1,11 +1,11 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link } from "react-scroll";
 
 function Navigation({ burgerState, setBurgerState }) {
 
   return (
     <>
-      <div className="flex flex-row min-w-full py-2 md:py-4 text-light-mode-A bg-light-mode-B sticky top-0 shadow-lg">
+      <div className="flex flex-row min-w-full py-2 md:py-4 text-light-mode-A bg-light-mode-B fixed top-0 shadow-lg">
         <div className="container flex flex-row items-center">
           <Link to="hero" spy={true} smooth={true} offset={-50} duration={500} >
             <h1 className="cursor-pointer text-md md:text-2xl font-semibold hover:opacity-50 duration-500">elijah banguis.</h1>
