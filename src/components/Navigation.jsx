@@ -1,7 +1,7 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "react-scroll";
 
-function Navigation() {
+function Navigation({ burgerState, setBurgerState }) {
 
   return (
     <>
@@ -11,6 +11,7 @@ function Navigation() {
             <h1 className="cursor-pointer text-md md:text-2xl font-semibold hover:opacity-50 duration-500">elijah banguis.</h1>
           </Link>
           <div className="grow flex justify-end">
+            <button onClick={() => setBurgerState(!burgerState)} className="md:hidden"><i className="fa-solid fa-bars"></i></button>
             <ul className="hidden md:flex flex-row gap-10 text-xs md:text-sm">
               <li>
                 <Link to="about" spy={true} smooth={true} offset={-75} duration={500} >
@@ -31,7 +32,6 @@ function Navigation() {
                 <p className="cursor-pointer hover:opacity-75 duration-500">Contacts</p>
               </li>
             </ul>
-            <button className="md:hidden"><i class="fa-solid fa-bars"></i></button>
           </div>
         </div>
       </div>
