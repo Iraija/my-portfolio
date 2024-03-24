@@ -4,7 +4,7 @@ function Hero() {
 
   return (
     <>
-      <div className="container flex justify-center items-center md:h-screen py-16 " id="hero">
+      <div className="container flex justify-center items-center h-screen py-16 " id="hero">
         <div className="flex flex-col md:flex-row justify-center items-center gap-5">
           <div className="h-40 w-40 md:h-60 md:w-60 bg-black rounded-full">
           </div>
