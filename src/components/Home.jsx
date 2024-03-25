@@ -13,7 +13,7 @@ function Home() {
 
   return (
     <>
-      <div id="darkMode" className={`flex-1 bg-${darkModeState ? 'dark-mode-B' : 'light-mode-A'} text-${darkModeState ? 'dark-mode-A' : 'light-mode-B'}`}>
+      <div id="darkMode" className={`flex-1 ${darkModeState ? 'bg-dark-mode-B' : 'bg-light-mode-A'} ${darkModeState ? 'text-dark-mode-A' : 'text-light-mode-B'}`}>
         <Navigation burgerState={burgerState} setBurgerState={setBurgerState} darkModeState={darkModeState} setDarkModeState={setDarkModeState}/>
         <Hero />
         <About />
