@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "react-scroll";
+import LightDarkMode from "./LightDarkMode";
 
 function SideBar({ burgerState, setBurgerState }) {
 

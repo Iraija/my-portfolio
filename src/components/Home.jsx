@@ -8,19 +8,19 @@ import Footer from "./Footer";
 import SideBar from "./home/general/SideBar";
 
 function Home() {
-  
+  const [ darkModeState, setDarkModeState ] = useState(false);
   const [ burgerState, setBurgerState ] = useState(false);
 
   return (
     <>
-      <div className="flex-1 bg-light-mode-A text-light-mode-B">
-        <Navigation burgerState={burgerState} setBurgerState={setBurgerState}/>
+      <div id="darkMode" className={`flex-1 bg-${darkModeState ? 'dark-mode-B' : 'light-mode-A'} text-${darkModeState ? 'dark-mode-A' : 'light-mode-B'}`}>
+        <Navigation burgerState={burgerState} setBurgerState={setBurgerState} darkModeState={darkModeState} setDarkModeState={setDarkModeState}/>
         <Hero />
         <About />
         <Projects />
         <Resume />
         <Footer />
-
+        
         {burgerState && <SideBar burgerState={burgerState} setBurgerState={setBurgerState}/>}
       </div>
     </>

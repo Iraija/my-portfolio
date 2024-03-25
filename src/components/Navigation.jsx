@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from "react-scroll";
+import LightDarkMode from "./home/general/LightDarkMode";
 
-function Navigation({ burgerState, setBurgerState }) {
+function Navigation({ burgerState, setBurgerState, darkModeState, setDarkModeState }) {
 
   return (
     <>
@@ -11,7 +12,12 @@ function Navigation({ burgerState, setBurgerState }) {
             <h1 className="cursor-pointer text-md md:text-2xl font-semibold hover:opacity-50 duration-500">elijah banguis.</h1>
           </Link>
           <div className="grow flex justify-end">
-            <button onClick={() => setBurgerState(!burgerState)} className="md:hidden"><i className="fa-solid fa-bars"></i></button>
+            <div className="md:hidden flex flex-row gap-5">
+              <div className="flex justify-center items-center">
+                <LightDarkMode darkModeState={darkModeState} setDarkModeState={setDarkModeState}/>
+              </div>
+              <button onClick={() => setBurgerState(!burgerState)} ><i className="fa-solid fa-bars"></i></button>
+            </div>
             <ul className="hidden md:flex flex-row gap-10 text-xs md:text-sm">
               <li>
                 <Link to="about" spy={true} smooth={true} offset={-75} duration={500} >
@@ -30,6 +36,9 @@ function Navigation({ burgerState, setBurgerState }) {
               </li>
               <li>
                 <p className="cursor-pointer hover:opacity-75 duration-500">Contacts</p>
+              </li>
+              <li>
+                <LightDarkMode darkModeState={darkModeState} setDarkModeState={setDarkModeState}/>
               </li>
             </ul>
           </div>
