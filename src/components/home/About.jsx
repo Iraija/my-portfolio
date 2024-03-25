@@ -9,7 +9,7 @@ function About() {
             <div className="flex flex-col py-10">
                 <p className="text-xs md:text-base text-justify">
                     Hi, my name is Elijah Banguis. I am a Front-End Web Developer and a Graphic Designer. I love and enjoy exploring new things to
-                    discover everything related to creativity and innovation. I specialize in developing front-end web application, system prototyping, digital arts,
+                    discover everything related to creativity and innovation. I specialize in developing front-end web applications, UI/UX design, and system prototyping, as well as creating digital arts,
                     brand identity design, and graphic design.
                 </p>
             </div>
