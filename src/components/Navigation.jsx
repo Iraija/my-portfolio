@@ -11,7 +11,7 @@ function Navigation({ burgerState, setBurgerState, darkModeState, setDarkModeSta
         <div className="container flex flex-row items-center">
           <Link to="hero" spy={true} smooth={true} offset={-50} duration={500} >
             <div className="cursor-pointer text-md md:text-2xl font-semibold hover:opacity-50 duration-500 flex flex-row gap-2">
-              <img src={Logo} alt="" className="w-[2rem] h-[2rem]"/>
+              <img src={Logo} alt="" className="w-[1.50rem] md:w-[2rem] h-[1.50rem] md:h-[2rem]"/>
               <p>elijahbanguis.</p>
             </div>
           </Link>
