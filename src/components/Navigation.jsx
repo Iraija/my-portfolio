@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import LightDarkMode from "./home/general/LightDarkMode";
 import Logo from "../assets/images/logo.png";
 
-function Navigation({ burgerState, setBurgerState, darkModeState, setDarkModeState }) {
+function Navigation({ burgerState, setBurgerState, darkModeState, setDarkModeState, contactState, setContactState }) {
 
   return (
     <>
@@ -39,7 +39,7 @@ function Navigation({ burgerState, setBurgerState, darkModeState, setDarkModeSta
                 </Link>
               </li>
               <li>
-                <p className="cursor-pointer hover:opacity-75 duration-500">Contacts</p>
+                <p onClick={() => setContactState(!contactState)} className="cursor-pointer hover:opacity-75 duration-500">Contacts</p>
               </li>
               <li>
                 <LightDarkMode darkModeState={darkModeState} setDarkModeState={setDarkModeState}/>

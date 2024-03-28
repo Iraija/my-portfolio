@@ -6,22 +6,31 @@ import Projects from "./home/Projects";
 import Resume from "./home/Resume";
 import Footer from "./Footer";
 import SideBar from "./home/general/SideBar";
+import ContactModal from "./home/general/ContactModal";
 
 function Home() {
   const [ darkModeState, setDarkModeState ] = useState(false);
   const [ burgerState, setBurgerState ] = useState(false);
+  const [ contactState, setContactState ] = useState(false);
 
   return (
     <>
-      <div id="darkMode" className={`flex-1 ${darkModeState ? 'bg-dark-mode-B' : 'bg-light-mode-A'} ${darkModeState ? 'text-dark-mode-A' : 'text-light-mode-B'}`}>
-        <Navigation burgerState={burgerState} setBurgerState={setBurgerState} darkModeState={darkModeState} setDarkModeState={setDarkModeState}/>
+      <div className={`flex-1 ${darkModeState ? 'bg-dark-mode-B' : 'bg-light-mode-A'} ${darkModeState ? 'text-dark-mode-A' : 'text-light-mode-B'}`}>
+
+        <Navigation burgerState={burgerState} setBurgerState={setBurgerState} darkModeState={darkModeState} setDarkModeState={setDarkModeState} contactState={contactState} setContactState={setContactState}/>
         <Hero />
         <About />
         <Projects />
         <Resume />
         <Footer />
         
-        {burgerState && <SideBar burgerState={burgerState} setBurgerState={setBurgerState}/>}
+        {burgerState && 
+          <SideBar setBurgerState={setBurgerState} setContactState={setContactState}/>
+        }
+        {contactState && 
+          <ContactModal darkModeState={darkModeState} setContactState={setContactState} />
+        }
+
       </div>
     </>
   )
