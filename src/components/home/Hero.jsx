@@ -1,7 +1,7 @@
 import React from "react"
 import Profile from "../../assets/images/profile.png";
 
-function Hero() {
+function Hero({ setContactState }) {
 
   return (
     <>
@@ -18,7 +18,7 @@ function Hero() {
               Front-End Web Developer & Graphic Designer
             </p>
             <div className="flex flex-row gap-5 text-xs md:text-base font-semibold justify-center pt-1 md:pt-3">
-              <button className="px-3 py-2 bg-gray-400 bg-opacity-25 hover:bg-opacity-50 duration-500 rounded-lg shadow-md"><i className="fa-solid fa-paper-plane"></i><span> Contact me!</span></button>
+              <button onClick={() => setContactState(prevState => !prevState)} className="px-3 py-2 bg-gray-400 bg-opacity-25 hover:bg-opacity-50 duration-500 rounded-lg shadow-md"><i className="fa-solid fa-paper-plane"></i><span> Contact me!</span></button>
               <a href="https://www.linkedin.com/in/elijah-banguis-82238a256" target="_blank" className="px-3 py-2 bg-gray-400 bg-opacity-25 hover:bg-opacity-50 duration-500 rounded-lg shadow-md"><i className="fa-brands fa-linkedin"></i><span> Lets connect!</span></a>
             </div>
           </div>
