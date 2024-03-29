@@ -80,7 +80,7 @@ function ContactModal({ darkModeState, setContactState, setSendEmailState, setSe
           </div>
         </div>
 
-        {loadingState &&
+        {!loadingState &&
           <Loading />
         }
     </div>

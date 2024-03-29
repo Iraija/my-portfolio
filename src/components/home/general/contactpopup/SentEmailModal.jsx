@@ -15,7 +15,7 @@ function SentEmailModal({ darkModeState, setSentEmailState, sentState }) {
         <div className="flex flex-col justify-center items-center gap-5">
           <div className="flex flex-col justify-center items-center">
             <div className={`h-32 w-32 mb-3 text-7xl text-light-mode-A flex justify-center items-center ${sentState ? 'bg-green-500' : 'bg-red-500'} rounded-full`}>
-              <i className="fa-solid fa-paper-plane"></i>
+              {sentState ? <i className="fa-solid fa-check"></i> : <i className="fa-solid fa-xmark"></i>}
             </div>
             <p className="font-semibold text-xs md:text-base">Your message has been sent</p>
             <p className="font-bold text-md md:text-2xl">{sentState ? 'SUCCESSFULLY!' : 'UNSUCCESSFULLY!'}</p>

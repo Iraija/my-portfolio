@@ -31,7 +31,7 @@ function Home() {
           <SideBar setBurgerState={setBurgerState} setContactState={setContactState}/>
         }
 
-        {contactState && 
+        {!contactState && 
           <ContactModal darkModeState={darkModeState} setContactState={setContactState} setSendEmailState={setSentEmailState} setSentState={setSentState} />
         }
 
